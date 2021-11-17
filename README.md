@@ -1,5 +1,5 @@
 # merakiDeviceReboot
-Script to reboot Meraki devices in an Org and posts the results to webex room.
+Script to reboot Meraki devices in an Org and posts the results to a WebEx room.
 
 ## Configuration
 * Add serial numbers of devices to apSerials.csv.  
