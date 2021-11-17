@@ -1,5 +1,5 @@
 # merakiDeviceReboot
-Script to reboot Meraki devices in an Org and posts the results to a WebEx room.
+Script to reboot Meraki devices.  Devices are list by serial numbers in a CSV file, and the results of the reboots are posted to a WebEx Room.
 
 ## Requirements
 * Python3
