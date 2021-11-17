@@ -26,7 +26,7 @@ import csv
 dashboard = meraki.DashboardAPI(tokens.API_KEY, suppress_logging=True)
 delay = 2
 
-
+# Read values from the CSV file.
 def readCsvFile():
     with open('apSerials.csv', 'r') as file:
         read = csv.reader(file)
@@ -36,6 +36,8 @@ def readCsvFile():
     return (csvRows)
 
 
+# Function to reboot each device by its serial number, and returning a list of
+# device serial numbers and its reboot status.
 def rebootDevice(deviceSerialNumbers):
     rebootStatus = []
 
@@ -48,17 +50,13 @@ def rebootDevice(deviceSerialNumbers):
             except:
                 print(f"Exception error: {item} -Check SDK Logs. Continuing.")
                 continue
+    # Return list of serial and status of the reboot trigger
     return(rebootStatus)
 
 
-def postWebex(rebootStatus):
-    webex = WebexTeamsAPI(access_token=tokens.WEBEX_TOKEN)
-
-    # Post the rebootStatus to the webex room
-    webex.messages.create(tokens.WEBEX_ROOMID, markdown=json.dumps(rebootStatus))
-    print("Reboot status results posted to Webex room.")
-
-
+# Function to create a summary status of the reboot results.
+# We're counting the number of device reboot success and fails, and returning
+# the final count and a list of devices that failed to trigger a reboot.
 def rebootStatus(rebootResults):
     passCount = 0
     failCount = 0
@@ -75,6 +73,15 @@ def rebootStatus(rebootResults):
     results.append({"apRebooted": passCount, "apNotRebooted": failCount, "apFailList": apFailList})
     print(results)
     return (results)
+
+
+# Function to post the final status results to a WebEx Room.
+def postWebex(rebootStatus):
+    webex = WebexTeamsAPI(access_token=tokens.WEBEX_TOKEN)
+
+    # Post the rebootStatus to the webex room
+    webex.messages.create(tokens.WEBEX_ROOMID, markdown=json.dumps(rebootStatus))
+    print("Reboot status results posted to Webex room.")
 
 
 if __name__ == '__main__':
