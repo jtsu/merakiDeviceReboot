@@ -36,25 +36,6 @@ def readCsvFile():
     return (csvRows)
 
 
-def getDeviceName(deviceSerialNumbers):
-
-    deviceName = []
-
-    for serial in deviceSerialNumbers:
-        try:
-            response = dashboard.devices.getDevice(serial)
-            print(f"{response['lanIp']}")
-
-            deviceName.append(response['name'])
-        except:
-            print(response)
-            continue
-    deviceName.sort()
-    print(deviceName)
-
-    return(deviceName)
-
-
 def rebootDevice(deviceSerialNumbers):
     rebootStatus = []
 
