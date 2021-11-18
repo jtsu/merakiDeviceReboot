@@ -17,11 +17,11 @@
 #
 
 echo
-echo "Starting cron..."
 /bin/date
 echo
-echo "Check processes..."
+echo "Starting cron..."
 /usr/sbin/cron start >> /app/start.log 2>&1
+echo "Check processes..."
 /bin/ps -aux
 echo
 echo "check cron jobs..."
