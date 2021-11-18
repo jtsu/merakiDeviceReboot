@@ -30,5 +30,5 @@ Python script to reboot Meraki devices.  Devices are list by serial number in a 
 * WebEx Access Tokens and Bots:
   * https://developer.webex.com/docs/getting-started#accounts-and-authentication
   * https://developer.webex.com/docs/integrations
-* WebEx Messaging Rooms:
-  * https://developer.webex.com/docs/api/v1/rooms/list-rooms
+* WebEx Messaging Rooms API:
+  * https://developer.webex.com/docs/api/v1/rooms
