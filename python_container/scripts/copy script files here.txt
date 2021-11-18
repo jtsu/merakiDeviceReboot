@@ -2,3 +2,5 @@
 #   - rebootDevices.py
 #   - tokens.py
 #   - apSerials.csv
+#
+# Note: CronJob will run rebootDevices.py script in this path.
