@@ -21,3 +21,14 @@ Python script to reboot Meraki devices.  Devices are list by serial number in a 
 
 ## Running the script
 * run: 'python3 rebootDevices.py'
+
+## Addition Info
+* Get your Meraki API Key:
+  * https://documentation.meraki.com/General_Administration/Other_Topics/Cisco_Meraki_Dashboard_API
+* API to get Meraki ORG ID:
+  * https://developer.cisco.com/meraki/api-v1/#!get-organizations
+* WebEx Access Tokens and Bots:
+  * https://developer.webex.com/docs/getting-started#accounts-and-authentication
+  * https://developer.webex.com/docs/integrations
+* WebEx Messaging Rooms:
+  * https://developer.webex.com/docs/api/v1/rooms/list-rooms
