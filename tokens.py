@@ -16,7 +16,7 @@ IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
 or implied.
 """
 
-API_KEY = "your meraki api key"
-ORG_ID = "your meraki org id"
-WEBEX_TOKEN = "your webex token"
-WEBEX_ROOMID = "your webex room id"
+API_KEY = "Your_Meraki_API_Key"
+ORG_ID = "Your_Meraki_ORG_ID"
+WEBEX_TOKEN = "Your_WebEx_Token"
+WEBEX_ROOMID = "Your_WebEx_Room_ID"
