@@ -1,6 +1,7 @@
 # merakiDeviceReboot
 Python script to reboot Meraki devices.  Devices are list by serial number in a CSV file, and the results of the reboots are posted to a WebEx Room.
 
+
 ## Requirements
 * Python3
 * Meraki SDK for Python
@@ -8,6 +9,7 @@ Python script to reboot Meraki devices.  Devices are list by serial number in a 
   * Meraki SDK on GitHub: https://github.com/meraki/dashboard-api-python/
 * WebEx Teams SDK for Python
   * WebExTeams SDK on GitHub: https://github.com/CiscoDevNet/webexteamssdk
+
 
 ## Configuration
 * Edit tokens.py with required info:
@@ -19,12 +21,20 @@ Python script to reboot Meraki devices.  Devices are list by serial number in a 
 * Add serial numbers of devices in apSerials.csv.  
   * Values should be comma separate.
 
+
 ## Running the Script
 * run: 'python3 rebootDevices.py'
 
+
 ## Python Docker Container
 * If you need a python environment with the required libraries and applications, files to build a docker container have been posted to the python_container folder.
-* Copy the script files to the scripts sub directory.  A cron job will run the script located in the scripts directory.
+* Copy the 3 script related files to the 'scripts' sub-directory before building your container.
+  * rebootDevices.py
+  * tokens.py
+  * apSerials.csv 
+* The dockerfile changes the working directory to the 'scripts' directory.
+* A cron job will run the reboot script located in the 'scripts' directory.
+
 
 ## Additional Information
 * Get your Meraki API Key:
