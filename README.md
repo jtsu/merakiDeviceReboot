@@ -24,6 +24,7 @@ Python script to reboot Meraki devices.  Devices are list by serial number in a 
 
 ## Python Docker Container
 * If you need a python environment with the required libraries and applications, files to build a docker container have been posted to the python_container folder.
+* Copy the script files to the scripts sub directory.  A cron job will run the script located in the scripts directory.
 
 ## Additional Information
 * Get your Meraki API Key:
