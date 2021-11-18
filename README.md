@@ -10,7 +10,12 @@ Python script to reboot Meraki devices.  Devices are list by serial number in a 
   * WebExTeams SDK on GitHub: https://github.com/CiscoDevNet/webexteamssdk
 
 ## Configuration
-* Edit tokens.py with your details.
+* Edit tokens.py with required info:
+  * API_KEY = "Your_Meraki_API_Key"
+  * ORG_ID = "Your_Meraki_ORG_ID"
+  * WEBEX_TOKEN = "Your_WebEx_Token"
+  * WEBEX_ROOMID = "Your_WebEx_Room_ID"
+
 * Add serial numbers of devices in apSerials.csv.  
   * Values should be comma separate.
 
