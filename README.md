@@ -19,10 +19,10 @@ Python script to reboot Meraki devices.  Devices are list by serial number in a 
 * Add serial numbers of devices in apSerials.csv.  
   * Values should be comma separate.
 
-## Running the script
+## Running the Script
 * run: 'python3 rebootDevices.py'
 
-## Addition Info
+## Additional Information
 * Get your Meraki API Key:
   * https://documentation.meraki.com/General_Administration/Other_Topics/Cisco_Meraki_Dashboard_API
 * API to get Meraki ORG ID:
