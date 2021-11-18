@@ -1,0 +1,7 @@
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# Check out https://crontab.guru for help.
+# m h  dom mon dow   command
+30 3 * * * echo "Starting Reboot Script" >> /app/start.log
+30 3 * * * /bin/date >> /app/start.log
+30 3 * * * /usr/local/bin/python /scripts/rebootDevices.py >> /app/start.log
