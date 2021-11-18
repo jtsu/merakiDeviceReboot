@@ -18,7 +18,7 @@ WORKDIR /app
 RUN apt-get update
 RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN apt-get install -y curl nano git cron
-copy ./scripts /scripts
+COPY ./scripts /scripts
 COPY ./requirements.txt /app
 COPY ./entrypoint.sh /app
 COPY ./crontab.txt /app
