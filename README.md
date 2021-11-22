@@ -34,8 +34,8 @@ Python script to reboot Meraki devices.  Devices are list by serial number in a 
   * apSerials.csv 
 * The dockerfile changes the working directory to the 'scripts' directory.
 * A cron job will run the reboot script located in the 'scripts' directory.
-  Known issue: Cron not running when configured via dockerfile.
-  Workaround: entrypoint.sh script starting cron.
+  * Known issue: Cron not running when configured via dockerfile.
+  * Workaround: entrypoint.sh script starting cron.
 
 
 ## Additional Information
